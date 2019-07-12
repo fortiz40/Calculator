@@ -1,0 +1,61 @@
+.calculator {
+    background: lightgreen;
+    width: 50%;
+
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    grid-template-areas: "screen screen screen screen"
+                         "one two three ."
+                         "four five six ."
+                         "seven eight nine ."
+                         "zero . . .";
+
+}
+
+#calc-screen {
+    height: 100;
+
+    grid-column: screen;
+}
+
+#one{
+    grid-column: one;
+}
+
+#two{
+    grid-column: two;
+}
+
+#three{
+    grid-column: three;
+}
+
+#four{
+    grid-column: four;
+}
+
+#five{
+    grid-column: five;
+}
+
+#six{
+    grid-column: six;
+}
+
+#seven{
+    grid-column: seven;
+}
+
+#eight{
+    grid-column: eight;
+}
+
+#nine{
+    grid-column: nine;
+}
+
+#zero{
+    grid-column: zero;
+}
