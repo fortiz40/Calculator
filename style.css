@@ -1,61 +1,93 @@
 .calculator {
     background: lightgreen;
-    width: 50%;
-
+    width: 400px;
+    margin: auto;
+    transform: translateY(50%);
     display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 75px 100px 100px 100px 100px;
 
     grid-template-areas: "screen screen screen screen"
-                         "one two three ."
-                         "four five six ."
-                         "seven eight nine ."
-                         "zero . . .";
+                         "seven eight nine mult"
+                         "four five six div"
+                         "one two three minus"
+                         "zero decimal clear plus";
 
 }
 
 #calc-screen {
     height: 100;
 
-    grid-column: screen;
+    grid-area: screen;
+}
+
+button {
+    height: 75%;
+    width: 75%;
+    margin: auto;
+    font-size: 20px;
 }
 
 #one{
-    grid-column: one;
+    grid-area: one;
 }
 
 #two{
-    grid-column: two;
+    grid-area: two;
 }
 
 #three{
-    grid-column: three;
+    grid-area: three;
 }
 
 #four{
-    grid-column: four;
+    grid-area: four;
 }
 
 #five{
-    grid-column: five;
+    grid-area: five;
 }
 
 #six{
-    grid-column: six;
+    grid-area: six;
 }
 
 #seven{
-    grid-column: seven;
+    grid-area: seven;
 }
 
 #eight{
-    grid-column: eight;
+    grid-area: eight;
 }
 
 #nine{
-    grid-column: nine;
+    grid-area: nine;
 }
 
 #zero{
-    grid-column: zero;
+    grid-area: zero;
+}
+
+#multilpy{
+    grid-area: mult;
+}
+
+#divide {
+    grid-area: div;
+}
+
+#plus {
+    grid-area: plus;
+}
+
+#minus {
+    grid-area: minus;
+}
+
+#decimal {
+    grid-area: decimal;
+}
+
+#clear {
+    grid-area: clear;
 }
