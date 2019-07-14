@@ -14,25 +14,36 @@
 
     <div class="calculator">
         <input type="text" id="calc-screen" readonly>
-        <button id= "one" class="button">1</button>
-        <button id= "two" class="button">2</button>
-        <button id= "three" class="button">3</button>
-        <button id= "four" class="button">4</button>
-        <button id= "five" class="button">5</button>
-        <button id= "six" class="button">6</button>
-        <button id= "seven" class="button">7</button>
-        <button id= "eight" class="button">8</button>
-        <button id= "nine" class="button">9</button>
-        <button id= "zero" class="button">0</button>
+        <button id= "one" onclick = "insertItem(1)">1</button>
+        <button id= "two" onclick = "insertItem(2)">2</button>
+        <button id= "three" onclick = "insertItem(3)">3</button>
+        <button id= "four" onclick = "insertItem(4)">4</button>
+        <button id= "five" onclick = "insertItem(5)">5</button>
+        <button id= "six" onclick = "insertItem(6)">6</button>
+        <button id= "seven" onclick = "insertItem(7)">7</button>
+        <button id= "eight" onclick = "insertItem(8)">8</button>
+        <button id= "nine" onclick = "insertItem(9)">9</button>
+        <button id= "zero" onclick = "insertItem(0)">0</button>
 
-        <button id="decimal">.</button>
-        <button id="multiply">*</button>
-        <button id="divide">/</button>
-        <button id="plus">+</button>
-        <button id="minus">-</button>
-        <button id="clear">C</button>
+        <button id="decimal" onclick = "insertItem('.')">.</button>
 
+        <button class= "operator-symbol" id="multiply" onclick = "insertItem('*')">*</button>
+        <button class= "operator-symbol" id="divide" onclick = "insertItem('/')">/</button>
+        <button class= "operator-symbol" id="plus" onclick = "insertItem('+')">+</button>
+        <button class= "operator-symbol" id="minus" onclick = "insertItem('-')">-</button>
+        <button class= "operator-symbol" id="equals" onclick="equals()">=</button>
+
+        <button id="clear" onclick= 'clearScreen();'>C</button>
+
+        <div class="error-container">
+            <div class="error-message">
+                Error
+            </div>
+        </div>
     </div>
+
     
 </body>
+
+<script src="calculator.js"></script>
 </html>

@@ -1,35 +1,57 @@
+body {
+    background: lightblue;
+}
+
 .calculator {
-    background: lightgreen;
-    width: 400px;
+    background: darkgray;
+    border-radius: 10%;
+    width: 450px;
     margin: auto;
-    transform: translateY(50%);
+    transform: translateY(25%);
     display: grid; 
     grid-template-columns: 100px 100px 100px 100px;
-    grid-template-rows: 75px 100px 100px 100px 100px;
+    grid-template-rows: 120px 100px 100px 100px 100px 100px 100px;
+    column-gap: 10px;
+    row-gap: 10px;
+    
 
     grid-template-areas: "screen screen screen screen"
-                         "seven eight nine mult"
-                         "four five six div"
-                         "one two three minus"
-                         "zero decimal clear plus";
+                         "clear clear clear div"
+                         "seven eight nine multiply"
+                         "four five six minus"
+                         "one two three plus"
+                         "zero zero decimal equals"
+                         "error error error error";
 
 }
 
 *{
     font-family: 'Montserrat', sans-serif;
+    color: white;
 }
 
 #calc-screen {
-    height: 100;
+    height: 75px;
+    margin: 10px;
+    transform: translateY(40%);
     font-size: 32px;
     grid-area: screen;
+    width: 422px;
+    color: black;
 }
 
 button {
-    height: 75%;
-    width: 75%;
-    margin: auto;
+    height: 100%;
+    width: 100%;
     font-size: 20px;
+    border-radius: 50%;
+    border: none;
+    margin: 10px;
+    background-color: gray;
+}
+
+.operator-symbol {
+    background: orange;
 }
 
 #one{
@@ -73,7 +95,7 @@ button {
 }
 
 #multilpy{
-    grid-area: mult;
+    grid-area: multiply;
 }
 
 #divide {
@@ -88,10 +110,35 @@ button {
     grid-area: minus;
 }
 
+#equals {
+    grid-area: equals;
+}
+
 #decimal {
     grid-area: decimal;
 }
 
 #clear {
     grid-area: clear;
+    background-color: lightgray;
+}
+
+.error-container {
+    grid-area: error;
+    position: relative;
+    text-align: center;
+}
+
+.error-message {
+    opacity: 0;
+    color: red;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.displayed {
+    opacity: 1;
 }
