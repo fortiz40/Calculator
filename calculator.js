@@ -9,6 +9,10 @@ function clearScreen() {
     calculatorScreen.value = '';
 }
 
+function deleteLastItem() {
+    calculatorScreen.value= calculatorScreen.value.slice(0 , -1);
+}
+
 function equals() {
 
     // If there is no expression to evaluate

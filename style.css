@@ -16,7 +16,7 @@ body {
     
 
     grid-template-areas: "screen screen screen screen"
-                         "clear clear clear div"
+                         "clear clear delete div"
                          "seven eight nine multiply"
                          "four five six minus"
                          "one two three plus"
@@ -123,6 +123,11 @@ button {
     background-color: lightgray;
 }
 
+#delete {
+    grid-area: delete;
+    background-color: lightgray;
+}
+
 .error-container {
     grid-area: error;
     position: relative;
@@ -142,3 +147,5 @@ button {
 .displayed {
     opacity: 1;
 }
+
+
