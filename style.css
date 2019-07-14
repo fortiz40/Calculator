@@ -15,9 +15,13 @@
 
 }
 
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
 #calc-screen {
     height: 100;
-
+    font-size: 32px;
     grid-area: screen;
 }
 
